@@ -1,5 +1,26 @@
 # Changelog - O-NET Schedule Manager
 
+## Version 2025-01-11 v2 - Vercel Deployment Fix
+
+### 🐛 Bug Fix
+- แก้ไขปัญหา 404 NOT_FOUND บน Vercel
+- เปลี่ยนจาก `rewrites` เป็น `routes` ใน vercel.json
+- เพิ่ม `handle: filesystem` เพื่อให้ Vercel serve static files ถูกต้อง
+
+### ✨ Changes
+1. **vercel.json**
+   - ใช้ `routes` แทน `rewrites` (Vercel v2 config)
+   - เพิ่ม filesystem handler สำหรับ static assets
+
+2. **VERCEL_DEPLOYMENT.md**
+   - เพิ่มส่วนการแก้ปัญหา 404 NOT_FOUND
+
+### 📦 Deployment
+- ต้อง redeploy บน Vercel หลัง push โค้ดใหม่
+- URL: `https://onet-schedule-manager.vercel.app/`
+
+---
+
 ## Version 2025-01-11 - GitHub Pages Base Path Fix
 
 ### 🐛 Critical Bug Fix
